@@ -89,17 +89,24 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 
-                <!-- BRANDING -->
-                <a href="#home" onclick="switchTab('home')" class="flex items-center space-x-3 group">
-                    <svg class="w-10 h-10 text-gold-500 group-hover:scale-105 transition-transform duration-200" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="4" />
-                        <path d="M50 20 V80 M25 35 L75 35 M25 35 L15 55 H35 L25 35 M75 35 L65 55 H85 L75 35 M35 75 H65" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <div>
-                        <span class="font-serif text-xl md:text-2xl font-bold tracking-wide text-white block">HEMANIL</span>
-                        <span class="text-[10px] md:text-xs tracking-[0.2em] text-gold-400 font-semibold uppercase block">Law Chambers</span>
-                    </div>
-                </a>
+                <!-- BRANDING & PHONE (Visible Immediately) -->
+                <div class="flex items-center space-x-6">
+                    <a href="#home" onclick="switchTab('home')" class="flex items-center space-x-3 group">
+                        <svg class="w-10 h-10 text-gold-500 group-hover:scale-105 transition-transform duration-200" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="4" />
+                            <path d="M50 20 V80 M25 35 L75 35 M25 35 L15 55 H35 L25 35 M75 35 L65 55 H85 L75 35 M35 75 H65" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div>
+                            <span class="font-serif text-xl md:text-2xl font-bold tracking-wide text-white block">HEMANIL</span>
+                            <span class="text-[10px] md:text-xs tracking-[0.2em] text-gold-400 font-semibold uppercase block">Law Chambers</span>
+                        </div>
+                    </a>
+
+                    <!-- Mobile Number Next to Branding -->
+                    <a href="tel:9311902438" class="hidden sm:inline-flex items-center text-xs md:text-sm text-gold-400 font-semibold hover:underline">
+                        <i class="fa-solid fa-phone mr-2 text-gold-500"></i> +91 9311902438
+                    </a>
+                </div>
 
                 <!-- DESKTOP NAV -->
                 <nav class="hidden md:flex space-x-1 lg:space-x-2">
@@ -110,15 +117,11 @@
                     <button onclick="switchTab('contact')" id="nav-contact" class="nav-btn px-4 py-2 text-sm font-medium rounded-md text-slate-300 hover:text-gold-400 hover:bg-navy-900 transition-colors">Contact</button>
                 </nav>
 
-                <!-- CALL CTA -->
-                <div class="hidden lg:flex items-center">
-                    <a href="tel:9311902438" class="inline-flex items-center px-4 py-2 border border-gold-500/40 text-xs font-semibold rounded-lg text-gold-400 bg-navy-900 hover:bg-gold-500 hover:text-navy-950 transition-all duration-200">
-                        <i class="fa-solid fa-phone mr-2"></i> +91 9311902438
-                    </a>
-                </div>
-
                 <!-- MOBILE MENU BUTTON -->
-                <div class="md:hidden flex items-center">
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:9311902438" class="text-gold-400 p-2 text-sm">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
                     <button onclick="toggleMobileMenu()" class="text-slate-300 hover:text-white p-2">
                         <i class="fa-solid fa-bars text-xl"></i>
                     </button>
@@ -141,7 +144,6 @@
         
         <!-- PAGE 1: HOME PAGE -->
         <section id="page-home" class="page-content">
-            <!-- HERO BANNER -->
             <div class="relative bg-navy-900 text-white overflow-hidden py-20 lg:py-28 border-b border-gold-500/20">
                 <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]"></div>
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -170,7 +172,6 @@
                 </div>
             </div>
 
-            <!-- CORE PRINCIPLES -->
             <div class="py-16 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center max-w-2xl mx-auto mb-12">
@@ -217,7 +218,6 @@
                     <div class="w-16 h-1 bg-gold-500 mx-auto mt-3"></div>
                 </div>
 
-                <!-- FOUNDER PROFILE CARD -->
                 <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden mb-12">
                     <div class="grid md:grid-cols-3">
                         <div class="bg-navy-900 text-white p-8 flex flex-col justify-between border-r border-gold-500/20">
@@ -391,29 +391,32 @@
                         </div>
                     </div>
 
-                    <!-- FORM -->
+                    <!-- FORM CONNECTED TO WEB3FORMS WITH KEY -->
                     <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
                         <h3 class="font-serif text-xl font-bold text-navy-900 mb-6">Schedule Consultation Request</h3>
-                        <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                            <!-- Web3Forms Access Key Integrated -->
+                            <input type="hidden" name="access_key" value="9e420ae8-8a1e-4963-9ae4-c2f343213358">
+
                             <div>
                                 <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Full Name *</label>
-                                <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:border-navy-900 text-sm">
+                                <input type="text" name="name" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:border-navy-900 text-sm">
                             </div>
 
                             <div class="grid sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Mobile Number *</label>
-                                    <input type="tel" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:border-navy-900 text-sm">
+                                    <input type="tel" name="phone" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:border-navy-900 text-sm">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Email Address</label>
-                                    <input type="email" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:border-navy-900 text-sm">
+                                    <input type="email" name="email" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:border-navy-900 text-sm">
                                 </div>
                             </div>
 
                             <div>
                                 <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Subject / Practice Area</label>
-                                <select class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:border-navy-900 text-sm">
+                                <select name="subject" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:border-navy-900 text-sm">
                                     <option>Civil Litigation</option>
                                     <option>Criminal Defense / Bail</option>
                                     <option>Family / Matrimonial Dispute</option>
@@ -424,7 +427,7 @@
 
                             <div>
                                 <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Brief Description</label>
-                                <textarea rows="3" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:border-navy-900 text-sm" placeholder="Provide brief summary of the matter..."></textarea>
+                                <textarea name="message" rows="3" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:border-navy-900 text-sm" placeholder="Provide brief summary of the matter..."></textarea>
                             </div>
 
                             <button type="submit" class="w-full py-3 bg-navy-900 hover:bg-navy-800 text-gold-400 font-semibold rounded-lg shadow transition-colors">
@@ -480,12 +483,6 @@
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
-        }
-
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            alert('Thank you. Your consultation request has been recorded. Adv. Shivam Sharma\'s chamber will respond shortly.');
-            e.target.reset();
         }
     </script>
 </body>
