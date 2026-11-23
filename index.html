@@ -106,6 +106,7 @@
                     <button onclick="switchTab('home')" id="nav-home" class="nav-btn px-4 py-2 text-sm font-medium rounded-md text-gold-400 bg-navy-900 transition-colors">Home</button>
                     <button onclick="switchTab('about')" id="nav-about" class="nav-btn px-4 py-2 text-sm font-medium rounded-md text-slate-300 hover:text-gold-400 hover:bg-navy-900 transition-colors">About Us</button>
                     <button onclick="switchTab('practices')" id="nav-practices" class="nav-btn px-4 py-2 text-sm font-medium rounded-md text-slate-300 hover:text-gold-400 hover:bg-navy-900 transition-colors">Practice Areas</button>
+                    <button onclick="switchTab('events')" id="nav-events" class="nav-btn px-4 py-2 text-sm font-medium rounded-md text-slate-300 hover:text-gold-400 hover:bg-navy-900 transition-colors">Chamber Events</button>
                     <button onclick="switchTab('disclaimer')" id="nav-disclaimer" class="nav-btn px-4 py-2 text-sm font-medium rounded-md text-slate-300 hover:text-gold-400 hover:bg-navy-900 transition-colors">Regulatory Compliance</button>
                     <button onclick="switchTab('contact')" id="nav-contact" class="nav-btn px-4 py-2 text-sm font-medium rounded-md text-slate-300 hover:text-gold-400 hover:bg-navy-900 transition-colors">Contact</button>
                 </nav>
@@ -131,6 +132,7 @@
             <button onclick="switchTab('home'); toggleMobileMenu();" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gold-400 bg-navy-950">Home</button>
             <button onclick="switchTab('about'); toggleMobileMenu();" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-navy-950 hover:text-gold-400">About Us</button>
             <button onclick="switchTab('practices'); toggleMobileMenu();" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-navy-950 hover:text-gold-400">Practice Areas</button>
+            <button onclick="switchTab('events'); toggleMobileMenu();" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-navy-950 hover:text-gold-400">Chamber Events</button>
             <button onclick="switchTab('disclaimer'); toggleMobileMenu();" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-navy-950 hover:text-gold-400">Regulatory Compliance</button>
             <button onclick="switchTab('contact'); toggleMobileMenu();" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-navy-950 hover:text-gold-400">Contact</button>
         </div>
@@ -202,38 +204,6 @@
                             </div>
                             <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Client Focus</h3>
                             <p class="text-slate-600 text-sm leading-relaxed">Transparent communication and personalized strategy tailored to each legal matter.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CHAMBER NOTE & PHOTO COLUMN -->
-            <div class="py-16 bg-slateBg border-t border-slate-200">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-                        <div class="grid md:grid-cols-12 items-center">
-                            <!-- Photo Column -->
-                            <div class="md:col-span-4 bg-navy-950 p-4 flex items-center justify-center">
-                                <img
-                                    src="diwali-pooja.jpg"
-                                    alt="Adv. Shivam Sharma in the chamber during Diwali pooja"
-                                    class="w-full max-h-80 object-cover object-top rounded-xl border border-gold-500/30"
-                                >
-                            </div>
-
-                            <!-- Text Column -->
-                            <div class="md:col-span-8 p-6 sm:p-8 lg:p-10">
-                                <span class="text-gold-600 font-semibold uppercase tracking-wider text-xs">From the Chamber</span>
-                                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy-900 mt-1 mb-4">
-                                    Diwali Pooja & Chamber Reflections
-                                </h2>
-                                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
-                                    Captured during Diwali pooja at our chamber in Rohini, Delhi—a quiet moment of gratitude for our roots, discipline, and dedication to principled legal work.
-                                </p>
-                                <p class="text-slate-500 text-xs sm:text-sm italic border-l-2 border-gold-500 pl-3">
-                                    "Grateful to carry forward values of integrity, diligence, and respect for the rule of law." — Adv. Shivam Sharma
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -343,7 +313,50 @@
             </div>
         </section>
 
-        <!-- PAGE 4: DISCLAIMER PAGE -->
+        <!-- PAGE 4: CHAMBER EVENTS PAGE -->
+        <section id="page-events" class="page-content hidden py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-gold-600 font-semibold uppercase tracking-wider text-xs">Chamber Moments</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900 mt-1">Chamber Events & Occasions</h2>
+                    <div class="w-16 h-1 bg-gold-500 mx-auto mt-3 mb-3"></div>
+                    <p class="text-slate-600 text-sm">Occasions and milestones recorded at Hemanil Law Chambers.</p>
+                </div>
+
+                <!-- EVENTS LIST (Add more event blocks below in the future) -->
+                <div class="space-y-8">
+                    <!-- EVENT 1: DIWALI POOJA -->
+                    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="grid md:grid-cols-12 items-center">
+                            <!-- Photo Column -->
+                            <div class="md:col-span-4 bg-navy-950 p-4 flex items-center justify-center">
+                                <img
+                                    src="diwali-pooja.jpg"
+                                    alt="Adv. Shivam Sharma in the chamber during Diwali pooja"
+                                    class="w-full h-auto object-contain rounded-xl border border-gold-500/30"
+                                >
+                            </div>
+
+                            <!-- Text Column -->
+                            <div class="md:col-span-8 p-6 sm:p-8 lg:p-10">
+                                <span class="text-gold-600 font-semibold uppercase tracking-wider text-xs">Diwali Pooja</span>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-navy-900 mt-1 mb-4">
+                                    Diwali Pooja at the Chamber
+                                </h3>
+                                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
+                                    Captured during Diwali pooja at our chamber in Rohini, Delhi—a quiet moment of gratitude for our roots, discipline, and dedication to principled legal work.
+                                </p>
+                                <p class="text-slate-500 text-xs sm:text-sm italic border-l-2 border-gold-500 pl-3">
+                                    "Grateful to carry forward values of integrity, diligence, and respect for the rule of law." — Adv. Shivam Sharma
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 5: DISCLAIMER PAGE -->
         <section id="page-disclaimer" class="page-content hidden py-12">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-md">
@@ -361,7 +374,7 @@
             </div>
         </section>
 
-        <!-- PAGE 5: CONTACT PAGE -->
+        <!-- PAGE 6: CONTACT PAGE -->
         <section id="page-contact" class="page-content hidden py-12">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12">
